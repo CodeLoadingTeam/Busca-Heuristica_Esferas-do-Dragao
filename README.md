@@ -1,24 +1,24 @@
-<h3>Siga os passos abaixo para configurar o seu GIT</h3>
+<h2>Siga os passos abaixo para configurar o seu GIT</h2><br>
 
-(Recomendação) <br>
+<h4>(Recomendação)</h4>
 Faça o download do GIT Desktop -> <a href="https://desktop.github.com">https://desktop.github.com</a>
 
 
 
-(Configuração) <br>
+<h4>(Configuração)</h4>
 Faça a instalação do terminal GIT Bash -> <a href="https://gitforwindows.org/">https://gitforwindows.org/</a><br><br>
 
 Adicione sua chave SSH ao seu GIT para facilitar a execução dos comandos dentro do terminal GIT Bash<br><br>
 
-- Verifique se em seu computador já existe uma chave SSH -> <a href="https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys">checking-for-existing-ssh-keys</a><br><br>
+- Verifique se em seu computador já existe uma chave SSH -> <a href="https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys">checking-for-existing-ssh-keys</a><br>
 
-- Gere uma chave SSH e adicione-á ao ssg-agent-> <a href="https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a><br><br>
+- Gere uma chave SSH e adicione-á ao ssg-agent-> <a href="https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a><br>
 
-- Faça a adição da chave SSH ao seu perfil do GIT Hub -> <a href="https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">adding-a-new-ssh-key-to-your-github-account</a><br><br>
+- Faça a adição da chave SSH ao seu perfil do GIT Hub -> <a href="https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">adding-a-new-ssh-key-to-your-github-account</a><br>
 
 
 
-(Comandos do GIT Bash) <br>
+<h4>(Comandos do GIT Bash)</h4>
 --> Para realizar um clone: <br>
 $ git clone "coloque aqui o ssh do repositório" <br><br>
 
@@ -45,7 +45,7 @@ $ git push <br><br>
 
 
 
-(Padrões de escrita) <br>
+<h4>(Padrões de escrita)</h4>
 Ao trabalharmos com branches e pull requests, seguiremos a seguinte nomenclatura:<br><br>
 
 Para Branch <br>
@@ -56,7 +56,7 @@ Para Pull Request (PR) <br>
      [HOTFIX][TAREFAX] - Exemplo de Título<br><br>
 
 
-Onde <br><br>
+Onde <br>
 
 Feature: destinado a criações/implementações<br>
 Hotfix: destinado a correções<br>
