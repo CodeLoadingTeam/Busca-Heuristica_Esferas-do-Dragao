@@ -41,22 +41,22 @@ $ git commit -m "texto do commit" <br><br>
 
 
 --> Para salvar na nuvem suas modificações: <br>
-$ git push <br><br>
+$ git push <br>
 
 
 
 <br><h4>(Padrões de escrita)</h4>
-Ao trabalharmos com branches e pull requests, seguiremos a seguinte nomenclatura:<br><br>
+Ao trabalharmos com branches e pull requests, seguiremos a seguinte nomenclatura:<br>
 
-Para Branch <br>
-     X/exemplo-de-título <br><br>
+<i>Para Branch:</i><br>
+<p>     X/exemplo-de-título</p><br><br>
 
-Para Pull Request (PR) <br>
-     [FEATURE][TAREFAX] - Exemplo de Título<br>
-     [HOTFIX][TAREFAX] - Exemplo de Título<br><br>
+<i>Para Pull Request (PR):</i><br>
+<p>     [FEATURE][TAREFAX] - Exemplo de Título</p><br>
+<p>     [HOTFIX][TAREFAX] - Exemplo de Título</p><br><br>
 
 
 Onde <br>
-Feature: destinado a criações/implementações<br>
-Hotfix: destinado a correções<br>
-X: Designado ao número da tarefa em questão<br><br>
+<p>    Feature: destinado a criações/implementações</p><br>
+<p>    Hotfix: destinado a correções</p><br>
+<p>    X: Designado ao número da tarefa em questão</p><br><br>
