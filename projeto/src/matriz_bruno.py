@@ -32,4 +32,3 @@ for linha in recuperaMundo():
         print('Terreno ', numeroTerreno, ': ', linha[index], '  ( valor: ', pontos, ')')
 
     espacamento()
-    
