@@ -17,11 +17,11 @@ def recuperaMundo():
 
 for linha in recuperaMundo():
 
-    for index in range(4):
+    for indice in range(4):
 
-        numeroTerreno = index + 1
+        numeroTerreno = indice + 1
 
-        match linha[index]:
+        match linha[indice]:
             case 'montanha':   
                 pontos = 60
             case 'água':
@@ -29,6 +29,6 @@ for linha in recuperaMundo():
             case 'grama':
                 pontos = 1
 
-        print('Terreno ', numeroTerreno, ': ', linha[index], '  ( valor: ', pontos, ')')
+        print('Terreno ', numeroTerreno, ': ', linha[indice], '  ( valor: ', pontos, ')')
 
     espacamento()
