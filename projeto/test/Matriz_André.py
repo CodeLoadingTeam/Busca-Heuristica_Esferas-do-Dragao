@@ -13,3 +13,4 @@ for i in range(4):
         elif mundo[i][j] == 1:
             print('-Grama- 1 ponto', end = " ")
     print()
+    
