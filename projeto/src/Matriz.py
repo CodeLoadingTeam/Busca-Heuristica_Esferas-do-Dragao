@@ -1,14 +1,20 @@
-#import numpy as np
-
 class Matriz:
 
-    def __init__(self):
-        self.__matriz = [[1,2] for _ in range(42)]
+    __tamanhoVetor = 4
 
+    def __init__(self):
+        self.__matriz = [self.__preencheColunas() for _ in range(self.__tamanhoVetor)]
+
+
+    ### ########################################################################## ###
+
+    def __preencheColunas(self):
+        vetor = []
+
+        for _ in range(self.__tamanhoVetor):
+            vetor.append(1)
+
+        return vetor
 
     def recuperaMatriz(self):
         return self.__matriz
-    
-    print(
-        len(recuperaMatriz())
-    )
