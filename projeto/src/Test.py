@@ -1,11 +1,6 @@
-# matriz = [
-#     [['A','l'], ['A',''], ['A',''], ['A','']],
-#     [['A',''], ['A',''], ['A',''], ['A','']],
-#     [['A',''], ['A',''], ['A',''], ['A','']],
-#     [['A',''], ['A',''], ['A',''], ['A','']]
-# ]
+estadoInicial = True
 
-def printaMatriz():
+def printarMatriz():
     global matriz
 
     for linha in matriz:
@@ -16,31 +11,37 @@ def printaMatriz():
         print()
     print()
 
+def inicializarAgente():
+    global matriz, estadoInicial
 
-def moveAgente(parametro_x, parametro_y):
-    global matriz, biomaAux, ultimoPasso
+    if estadoInicial == True:
+        x, y = 3, 2
+        estadoInicial = False
 
-    if '⌘' not in matriz:
-        guardaBiomaDoAgente(parametro_x, parametro_y)
+        guardarBiomaDoAgente(x, y)
+        matriz[y][x] = '⌘'
 
-        matriz[parametro_y][parametro_x] = '⌘'
-        ultimoPasso = [parametro_y, parametro_x]
-        return
-
+def moverAgente(parametro_x, parametro_y):
+    global matriz, estadoInicial, biomaAtual, ultimoPasso
+    
     x = ultimoPasso[0]
     y = ultimoPasso[1]
 
-    matriz[y][x] = ultimoPasso
+    matriz[y][x] = biomaAtual
+
+    guardarBiomaDoAgente(parametro_x, parametro_y)
 
     matriz[parametro_y][parametro_x] = '⌘'
-    ultimoPasso = [parametro_y, parametro_x]
+
+    matriz[parametro_y][parametro_x] = '⌘'
+    ultimoPasso = [parametro_x, parametro_y]
      
 
-def guardaBiomaDoAgente(x, y):
-    global matriz, biomaAux
+def guardarBiomaDoAgente(x, y):
+    global matriz, biomaAtual
 
     # Salva o bioma que o agente está
-    biomaAux = matriz[y][x]
+    biomaAtual = matriz[y][x]
 
 
 ########################################
@@ -53,8 +54,11 @@ matriz = [
     ['G', 'A', 'A', 'A', 'A']
 ]
 
-moveAgente(2, 3)
-printaMatriz()
+inicializarAgente()
 
-moveAgente(2, 4)
-printaMatriz()
+moverAgente(3, 2)
+printarMatriz()
+
+
+moverAgente(2, 2)
+printarMatriz()
