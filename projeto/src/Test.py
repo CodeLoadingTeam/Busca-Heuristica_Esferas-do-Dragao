@@ -30,7 +30,7 @@ def moveAgente(parametro_x, parametro_y):
     x = ultimoPasso[0]
     y = ultimoPasso[1]
 
-    matriz[x][y] = ultimoPasso
+    matriz[y][x] = ultimoPasso
 
     matriz[parametro_y][parametro_x] = '⌘'
     ultimoPasso = [parametro_y, parametro_x]
@@ -40,7 +40,7 @@ def guardaBiomaDoAgente(x, y):
     global matriz, biomaAux
 
     # Salva o bioma que o agente está
-    biomaAux = matriz[x][y]
+    biomaAux = matriz[y][x]
 
 
 ########################################
