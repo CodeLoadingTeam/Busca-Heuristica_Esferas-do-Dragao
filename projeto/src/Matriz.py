@@ -1,6 +1,6 @@
 class Matriz:
 
-    __tamanhoVetor = 4
+    __tamanhoVetor = 42
 
     def __init__(self):
         self.__matriz = [self.__preencheColunas() for _ in range(self.__tamanhoVetor)]
@@ -12,9 +12,19 @@ class Matriz:
         vetor = []
 
         for _ in range(self.__tamanhoVetor):
-            vetor.append(1)
+            vetor.append('A')
 
         return vetor
 
     def recuperaMatriz(self):
         return self.__matriz
+    
+mundo = Matriz()
+
+for linha in mundo.recuperaMatriz():
+
+    for coluna in linha: 
+        print(coluna, end= ' ')
+
+    print()
+    
