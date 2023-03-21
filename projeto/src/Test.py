@@ -24,10 +24,10 @@ def inicializarAgente():
 def moverAgente(parametro_x, parametro_y):
     global matriz, estadoInicial, biomaAtual, ultimoPasso
     
-    x = ultimoPasso[0]
-    y = ultimoPasso[1]
+    # x = ultimoPasso[0]
+    # y = ultimoPasso[1]
 
-    matriz[y][x] = biomaAtual
+    # matriz[y][x] = biomaAtual
 
     guardarBiomaDoAgente(parametro_x, parametro_y)
 
