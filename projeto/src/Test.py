@@ -1,4 +1,6 @@
 estadoInicial = True
+x_inicial, y_inicial = 3, 2
+
 
 def printarMatriz():
     global matriz
@@ -11,37 +13,42 @@ def printarMatriz():
         print()
     print()
 
+
 def inicializarAgente():
     global matriz, estadoInicial
 
     if estadoInicial == True:
-        x, y = 3, 2
-        estadoInicial = False
 
-        guardarBiomaDoAgente(x, y)
-        matriz[y][x] = '⌘'
+        guardarBiomaDoAgente(x_inicial, y_inicial)
+        matriz[y_inicial][x_inicial] = '⌘'
+
 
 def moverAgente(parametro_x, parametro_y):
-    global matriz, estadoInicial, biomaAtual, ultimoPasso
-    
-    # x = ultimoPasso[0]
-    # y = ultimoPasso[1]
+    global matriz, estadoInicial, bioma, ultimoLocalAgente
 
-    # matriz[y][x] = biomaAtual
+    if estadoInicial == False:
+        
+        x = ultimoLocalAgente[0]
+        y = ultimoLocalAgente[1]
+        matriz[y][x] = bioma 
+        ultimoLocalAgente  = [parametro_x, parametro_y]    
+    
+    else:
+        estadoInicial = False
+        ultimoLocalAgente = [x_inicial, y_inicial]
+        x = ultimoLocalAgente[0]
+        y = ultimoLocalAgente[1]
+        matriz[y][x] = bioma  
 
     guardarBiomaDoAgente(parametro_x, parametro_y)
-
     matriz[parametro_y][parametro_x] = '⌘'
-
-    matriz[parametro_y][parametro_x] = '⌘'
-    ultimoPasso = [parametro_x, parametro_y]
-     
+ 
 
 def guardarBiomaDoAgente(x, y):
-    global matriz, biomaAtual
+    global matriz, bioma
 
     # Salva o bioma que o agente está
-    biomaAtual = matriz[y][x]
+    bioma = matriz[y][x]
 
 
 ########################################
@@ -61,4 +68,10 @@ printarMatriz()
 
 
 moverAgente(2, 2)
+printarMatriz()
+
+moverAgente(1, 2)
+printarMatriz()
+
+moverAgente(1, 1)
 printarMatriz()
