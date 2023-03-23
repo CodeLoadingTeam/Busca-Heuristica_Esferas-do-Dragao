@@ -53,13 +53,7 @@ def guardarBiomaDoAgente(x, y):
 
 ########################################
 
-matriz = [
-    ['M', 'M', 'G', 'G', 'G'],
-    ['M', 'G', 'A', 'G', 'G'],
-    ['G', 'G', 'A', 'I', 'G'],
-    ['G', 'A', 'A', 'A', 'A'],
-    ['G', 'A', 'A', 'A', 'A']
-]
+
 
 inicializarAgente()
 
