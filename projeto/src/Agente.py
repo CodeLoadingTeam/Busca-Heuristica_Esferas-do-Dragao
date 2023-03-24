@@ -7,6 +7,7 @@ class Agente():
     y = 2
     inicializacao = True
 
+
     def __init__(self):
 
         self.mundo = Mundo()
@@ -48,6 +49,7 @@ class Agente():
         x = self.localizacaoAnterior[0]
         y = self.localizacaoAnterior[1]
         self.mundo.usarMatriz()[y][x] = self.bioma
+
 
     def mostrarMundo(self):
         return self.mundo.printarMatriz()
