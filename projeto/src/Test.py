@@ -1,6 +1,10 @@
 estadoInicial = True
 x_inicial, y_inicial = 3, 2
 
+# CIMA = 'cima'
+# BAIXO = 'baixo'
+# ESQUERDA = 'esquerda'
+# DIREITA = 'direita'
 
 def printarMatriz():
     global matriz
@@ -69,3 +73,5 @@ printarMatriz()
 
 moverAgente(1, 1)
 printarMatriz()
+
+# moverAgente(CIMA)
