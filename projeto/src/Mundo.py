@@ -9,11 +9,14 @@ class Mundo:
             ['G', 'A', 'A', 'A', 'A']
         ]
 
+
     def usarMatriz(self):
         return self.__matriz
     
+
     def atualizarMatriz(self, x, y, valor):
-        self.matriz[y][x] = valor
+        self.__matriz[y][x] = valor
+
 
     def printarMatriz(self):
 
