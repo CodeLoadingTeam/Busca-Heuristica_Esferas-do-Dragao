@@ -10,7 +10,7 @@ class Agente():
 
     def __init__(self):
 
-        self.mundo = Mundo()
+        self.__mundo = Mundo()
         self.__direcao = Direcional()
 
 
@@ -36,20 +36,20 @@ class Agente():
         else:
             self.inicializacao = False
 
-        self.localizacaoAnterior = [self.x, self.y]
+        self.localizacao = [self.x, self.y]
         self.__armazenarBiomaAtual()
-        self.mundo.atualizarMatriz(self.x, self.y, '⌘')
+        self.__mundo.atualizarMatriz(self.x, self.y, '⌘')
 
 
     def __armazenarBiomaAtual(self):
-        self.bioma = self.mundo.usarMatriz()[self.y][self.x]
+        self.__bioma = self.__mundo.usarMatriz()[self.y][self.x]
 
 
     def __restaurarLocalizacaoAnterior(self):
-        x = self.localizacaoAnterior[0]
-        y = self.localizacaoAnterior[1]
-        self.mundo.usarMatriz()[y][x] = self.bioma
+        x = self.localizacao[0]
+        y = self.localizacao[1]
+        self.__mundo.usarMatriz()[y][x] = self.__bioma
 
 
     def mostrarMundo(self):
-        return self.mundo.printarMatriz()
+        return self.__mundo.printarMatriz()

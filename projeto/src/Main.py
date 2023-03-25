@@ -5,7 +5,6 @@ agente = Agente()
 ##############################
 
 # para trabalhar com o agente, utilize os métodos deslocar() e mostrarMundo()
-
 agente.deslocar()
 agente.mostrarMundo()
 
