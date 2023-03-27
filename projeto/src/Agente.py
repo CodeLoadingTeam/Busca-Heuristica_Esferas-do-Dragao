@@ -3,8 +3,8 @@ from Direcional import Direcional
 
 class Agente():
 
-    x = 3
-    y = 2
+    x = 19
+    y = 19
     inicializacao = True
 
 
