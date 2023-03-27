@@ -17,5 +17,5 @@ class Direcional:
         ]
 
 
-    def proximoPasso(self):
+    def escolherPasso(self):
         return self.direcao[self.sorteador.randrange(4)]

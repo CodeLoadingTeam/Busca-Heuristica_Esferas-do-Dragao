@@ -17,21 +17,8 @@ class Agente():
     def deslocar(self):
         
         if self.inicializacao != True:
-
             self.__restaurarLocalizacaoAnterior()
-
-            match self.__direcao.proximoPasso():
-               case self.__direcao.ESQUERDA:
-                   self.x += -1
-
-               case self.__direcao.DIREITA:
-                   self.x += 1
-
-               case self.__direcao.CIMA:
-                   self.y += -1
-
-               case self.__direcao.BAIXO:
-                   self.y += 1
+            self.__proximoPasso()
 
         else:
             self.inicializacao = False
@@ -49,6 +36,33 @@ class Agente():
         x = self.localizacao[0]
         y = self.localizacao[1]
         self.__mundo.usarMatriz()[y][x] = self.__bioma
+
+
+    def __proximoPasso(self):
+        
+        while True:
+            passo_x, passo_y = self.x, self.y
+            extremidadeInicial, extremidadeFinal = 0, self.__mundo.dimensaoDaMatriz()
+
+            direcaoSorteada = self.__direcao.escolherPasso()
+
+            match direcaoSorteada:
+                case self.__direcao.ESQUERDA:
+                    passo_x += -1
+
+                case self.__direcao.DIREITA:
+                    passo_x += 1
+
+                case self.__direcao.CIMA:
+                    passo_y += -1
+
+                case self.__direcao.BAIXO:
+                    passo_y += 1
+
+            if (passo_x > extremidadeInicial and passo_x < extremidadeFinal) and (passo_y > extremidadeInicial and passo_y < extremidadeFinal):
+                self.x = passo_x
+                self.y = passo_y
+                break
 
 
     def mostrarMundo(self):

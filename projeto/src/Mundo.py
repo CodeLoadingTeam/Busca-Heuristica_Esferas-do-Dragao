@@ -9,6 +9,8 @@ class Mundo:
             ['G', 'A', 'A', 'A', 'A']
         ]
 
+        self.__dimensaoMatriz = len(self.usarMatriz())
+
 
     def usarMatriz(self):
         return self.__matriz
@@ -28,3 +30,7 @@ class Mundo:
             print()
 
         print()
+
+
+    def dimensaoDaMatriz(self):
+        return self.__dimensaoMatriz
