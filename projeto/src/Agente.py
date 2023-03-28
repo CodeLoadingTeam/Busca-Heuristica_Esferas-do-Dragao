@@ -1,7 +1,7 @@
 from Mundo import Mundo
 from Direcional import Direcional
 
-class Agente():
+class Agente:
 
     x = 19
     y = 19
@@ -9,7 +9,6 @@ class Agente():
 
 
     def __init__(self):
-
         self.__mundo = Mundo()
         self.__direcao = Direcional()
 
