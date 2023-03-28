@@ -1,6 +1,9 @@
+from Esferas import Esferas
+
 class Mundo:
 
     def __init__(self):
+        self.__esferas = Esferas()
         self.__matriz = [
             ['G','G','G','G','G','G','G','M','G','M','G','M','G','M','G','G','G','G','G','A','A','A','A','G','G','G','G','G','G','G','G','M','G','M','M','M','M','M','G','G','G','G'],
             ['M','G','M','M','M','M','G','G','G','G','G','M','G','M','G','M','M','M','M','M','A','A','A','G','G','M','M','M','M','G','G','M','G','G','G','G','G','M','G','M','M','M'],
@@ -71,3 +74,7 @@ class Mundo:
 
     def dimensaoDaMatriz(self):
         return self.__dimensaoMatriz
+    
+
+    def usarEsferas(self):
+        return self.__esferas

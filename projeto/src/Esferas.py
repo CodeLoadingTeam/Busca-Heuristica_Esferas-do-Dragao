@@ -25,19 +25,19 @@ class Esferas:
             self.ESFERA7
         }
         
-        self.gerarLocalizacoes()
+        self.__gerarLocalizacoes()
 
 
-    def gerarLocalizacoes(self):
+    def __gerarLocalizacoes(self):
 
         for _ in self.esferas:
             self.localizacoes.append(
                 [
-                    self.sortearPosicaoNoEixo(),
-                    self.sortearPosicaoNoEixo(),
+                    self.__sortearPosicaoNoEixo(),
+                    self.__sortearPosicaoNoEixo(),
                     True
                 ])
 
 
-    def sortearPosicaoNoEixo(self):
+    def __sortearPosicaoNoEixo(self):
         return self.sorteador.randrange(42)

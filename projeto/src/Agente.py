@@ -1,5 +1,6 @@
 from Mundo import Mundo
 from Direcional import Direcional
+from Radar import Radar
 
 class Agente:
 
@@ -11,6 +12,7 @@ class Agente:
     def __init__(self):
         self.__mundo = Mundo()
         self.__direcao = Direcional()
+        self.__radar = Radar(self.__mundo)
 
 
     def deslocar(self):
@@ -25,6 +27,7 @@ class Agente:
         self.localizacao = [self.x, self.y]
         self.__armazenarBiomaAtual()
         self.__mundo.atualizarMatriz(self.x, self.y, '⌘')
+        self.__radar.moverRadar(self.x, self.y)
 
 
     def __armazenarBiomaAtual(self):

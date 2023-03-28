@@ -1,26 +1,27 @@
-from Agente import Agente
+from Mundo import Mundo
 
 class Radar:
-
-    def __init__(self):
-        self.__agente = Agente()
+    
+    def __init__(self, mundo):
+        self.__mundo = mundo
 
         self.moverRadar()
 
 
-    def moverRadar(self):
-        self.x0 = self.__agente.x - 3
-        self.y0 = self.__agente.y - 3
-        self.x0 = self.__agente.x + 3
-        self.y0 = self.__agente.y + 3
+    def moverRadar(self, agente_x, agente_y):
+        self.x0 = agente_x - 3
+        self.y0 = agente_y - 3
+        self.x0 = agente_x + 3
+        self.y0 = agente_y + 3
 
         self.__verificarEsferas()
 
 
-    def __verificarEsferas():
+    def __verificarEsferas(self):
+        
+        for y0 in range(self.y0, self.y1):
+            for radar_x0 in range(self.x0, self.x1):
 
-        for radar_y0 in range(y, y-3, -1):
-            for radar_x0 in range(x, x-3, -1):
                 
 
 
