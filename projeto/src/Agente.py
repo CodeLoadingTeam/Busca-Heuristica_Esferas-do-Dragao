@@ -12,7 +12,7 @@ class Agente:
     def __init__(self):
         self.__mundo = Mundo()
         self.__direcao = Direcional()
-        self.__radar = Radar(self.__mundo)
+        self.__radar = Radar(self.x, self.y, self.__mundo)
 
 
     def deslocar(self):
@@ -69,3 +69,4 @@ class Agente:
 
     def mostrarMundo(self):
         return self.__mundo.printarMatriz()
+

@@ -33,11 +33,19 @@ class Esferas:
         for esfera in self.esferas:
             self.localizacoes.append(
                 [
-                    self.__sortearPosicaoNoEixo(),
-                    self.__sortearPosicaoNoEixo(),
+                    self.__sortearY(),
+                    self.__sortearX(),
                     esfera
                 ])
-    
+
+
+    def __sortearY(self):
+        self.__sortearPosicaoNoEixo()
+
+
+    def __sortearX(self):
+        self.__sortearPosicaoNoEixo()
+
 
     def __sortearPosicaoNoEixo(self):
         return self.sorteador.randrange(42)
