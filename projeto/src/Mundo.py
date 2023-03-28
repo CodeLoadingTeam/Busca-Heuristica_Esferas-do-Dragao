@@ -76,5 +76,14 @@ class Mundo:
         return self.__dimensaoMatriz
     
 
-    def usarEsferas(self):
-        return self.__esferas
+    def coordenadasDasEsferas(self):
+        return self.__esferas.localizacoes
+
+
+    def coletarEsfera(self, posicao):
+        self.__esferas.localizacoes[posicao][2] = ''
+
+m = Mundo()
+
+
+print(m.coordenadasDasEsferas())

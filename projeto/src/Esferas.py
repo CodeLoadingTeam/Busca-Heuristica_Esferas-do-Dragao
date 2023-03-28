@@ -30,14 +30,14 @@ class Esferas:
 
     def __gerarLocalizacoes(self):
 
-        for _ in self.esferas:
+        for esfera in self.esferas:
             self.localizacoes.append(
                 [
                     self.__sortearPosicaoNoEixo(),
                     self.__sortearPosicaoNoEixo(),
-                    True
+                    esfera
                 ])
-
+    
 
     def __sortearPosicaoNoEixo(self):
         return self.sorteador.randrange(42)
