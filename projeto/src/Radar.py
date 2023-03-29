@@ -4,15 +4,35 @@ from Direcional import Direcional
 class Radar:
 
     def __init__(self, agente_x, agente_y, mundo):
-        self.__mundo = Mundo() # trocar para mundo
-        self.__direcao = Direcional()
+        self.__mundo = Mundo() # trocar Mundo() para mundo
+        # self.__direcao = Direcional()
         self.moverRadar(agente_x, agente_y)
 
     def moverRadar(self, agente_x, agente_y):
-        self.x0 = agente_x - 3
-        self.y0 = agente_y - 3
-        self.x0 = agente_x + 3
-        self.y0 = agente_y + 3
+  
+        self.superiorEsquerdo = [
+            [[agente_x - 3, agente_y - 3], [agente_x - 2, agente_y - 3], [agente_x - 1, agente_y - 3]],
+            [[agente_x - 3, agente_y - 2]],
+            [[agente_x - 3, agente_y - 1]],
+        ]
+
+        self.superiorDireito = [
+            [[agente_x + 3, agente_y - 3], [agente_x + 2, agente_y - 3], [agente_x + 1, agente_y - 3]],
+                                                                        [[agente_x + 3, agente_y - 2]],
+                                                                        [[agente_x + 3, agente_y - 1]],
+        ]
+
+        self.inferiorEsquerdo = [
+            [[agente_x - 3, agente_y + 1]],
+            [[agente_x - 3, agente_y + 2]],
+            [[agente_x - 3, agente_y + 3], [agente_x - 2, agente_y + 3], [agente_x - 1, agente_y + 3]]
+        ]
+
+        self.inferiorDireito = [
+                                                                        [[agente_x + 3, agente_y + 1]],
+                                                                        [[agente_x + 3, agente_y + 2]],
+            [[agente_x + 3, agente_y + 3], [agente_x + 2, agente_y + 3], [agente_x + 1, agente_y + 3]]
+        ]
 
         self.__verificarEsferas()
 
@@ -39,5 +59,5 @@ class Radar:
         for esfera in self.__mundo.coordenadasDasEsferas():
             x, y = 1, 0
 
-            if esfera[x] == self.x0 and self.x0
+            if esfera[x] 
 

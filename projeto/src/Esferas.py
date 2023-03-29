@@ -15,7 +15,7 @@ class Esferas:
         self.ESFERA6 = 'Esfera 6'
         self.ESFERA7 = 'Esfera 7'
     
-        self.esferas = {	
+        self.esferas = [
             self.ESFERA1,
             self.ESFERA2,
             self.ESFERA3,
@@ -23,7 +23,7 @@ class Esferas:
             self.ESFERA5,
             self.ESFERA6,
             self.ESFERA7
-        }
+        ]
         
         self.__gerarLocalizacoes()
 
@@ -31,21 +31,15 @@ class Esferas:
     def __gerarLocalizacoes(self):
 
         for esfera in self.esferas:
+            print(esfera)
             self.localizacoes.append(
                 [
-                    self.__sortearY(),
-                    self.__sortearX(),
+                    self.__sortearPosicaoNoEixo(),
+                    self.__sortearPosicaoNoEixo(),
                     esfera
                 ])
 
 
-    def __sortearY(self):
-        self.__sortearPosicaoNoEixo()
-
-
-    def __sortearX(self):
-        self.__sortearPosicaoNoEixo()
-
-
     def __sortearPosicaoNoEixo(self):
         return self.sorteador.randrange(42)
+

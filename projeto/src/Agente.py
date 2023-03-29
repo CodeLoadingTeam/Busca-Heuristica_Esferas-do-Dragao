@@ -12,7 +12,7 @@ class Agente:
     def __init__(self):
         self.__mundo = Mundo()
         self.__direcao = Direcional()
-        self.__radar = Radar(self.x, self.y, self.__mundo)
+        self.radar = Radar(self.x, self.y, self.__mundo)
 
 
     def deslocar(self):
@@ -27,7 +27,7 @@ class Agente:
         self.localizacao = [self.x, self.y]
         self.__armazenarBiomaAtual()
         self.__mundo.atualizarMatriz(self.x, self.y, '⌘')
-        self.__radar.moverRadar(self.x, self.y)
+        self.radar.moverRadar(self.x, self.y)
 
 
     def __armazenarBiomaAtual(self):
@@ -70,3 +70,9 @@ class Agente:
     def mostrarMundo(self):
         return self.__mundo.printarMatriz()
 
+a = Agente()
+a.deslocar()
+print(a.radar.superiorEsquerdo)
+print(a.radar.superiorDireito)
+print(a.radar.inferiorEsquerdo)
+print(a.radar.inferiorDireito)
