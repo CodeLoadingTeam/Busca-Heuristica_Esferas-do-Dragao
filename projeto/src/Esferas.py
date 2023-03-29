@@ -16,7 +16,7 @@ class Esferas:
         self.ESFERA7 = 'Esfera 7'
     
         self.esferas = [
-            self.ESFERA1,
+            self.ESFERA1
             # self.ESFERA2,
             # self.ESFERA3,
             # self.ESFERA4,

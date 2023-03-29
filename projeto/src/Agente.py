@@ -10,9 +10,9 @@ class Agente:
 
 
     def __init__(self):
-        self.__mundo = Mundo()
+        self.mundo = Mundo()
         self.__direcao = Direcional()
-        self.radar = Radar(self.x, self.y, self.__mundo)
+        self.radar = Radar(self.x, self.y, self.mundo)
 
 
     def deslocar(self):
@@ -20,31 +20,32 @@ class Agente:
         if self.inicializacao != True:
             self.__restaurarLocalizacaoAnterior()
             self.__proximoPasso()
+            self.radar.moverRadar(self.x, self.y)
 
         else:
             self.inicializacao = False
 
         self.localizacao = [self.x, self.y]
         self.__armazenarBiomaAtual()
-        self.__mundo.atualizarMatriz(self.x, self.y, '⌘')
-        self.radar.moverRadar(self.x, self.y)
+        self.mundo.atualizarMatriz(self.x, self.y, '⌘')
+        
 
 
     def __armazenarBiomaAtual(self):
-        self.__bioma = self.__mundo.usarMatriz()[self.y][self.x]
+        self.__bioma = self.mundo.usarMatriz()[self.y][self.x]
 
 
     def __restaurarLocalizacaoAnterior(self):
         x = self.localizacao[0]
         y = self.localizacao[1]
-        self.__mundo.usarMatriz()[y][x] = self.__bioma
+        self.mundo.usarMatriz()[y][x] = self.__bioma
 
 
     def __proximoPasso(self):
         
         while True:
             passo_x, passo_y = self.x, self.y
-            extremidadeInicial, extremidadeFinal = 0, self.__mundo.dimensaoDaMatriz()
+            extremidadeInicial, extremidadeFinal = 0, self.mundo.dimensaoDaMatriz()
 
             direcaoSorteada = self.__direcao.escolherPasso()
 
@@ -68,11 +69,12 @@ class Agente:
 
 
     def mostrarMundo(self):
-        return self.__mundo.printarMatriz()
+        return self.mundo.printarMatriz()
 
 
 a = Agente()
 # print(a.radar.superiorEsquerdo[0][0])
+
 a.deslocar()
 # print(a.radar.superiorEsquerdo)
 # print(a.radar.superiorDireito)

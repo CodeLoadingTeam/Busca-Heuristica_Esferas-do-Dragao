@@ -82,9 +82,3 @@ class Mundo:
 
     def coletarEsfera(self, posicao):
         self.__esferas.localizacoes[posicao][2] = ''
-
-
-m = Mundo()
-
-
-print(m.coordenadasDasEsferas())
