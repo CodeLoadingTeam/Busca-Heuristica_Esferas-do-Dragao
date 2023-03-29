@@ -17,12 +17,12 @@ class Esferas:
     
         self.esferas = [
             self.ESFERA1,
-            self.ESFERA2,
-            self.ESFERA3,
-            self.ESFERA4,
-            self.ESFERA5,
-            self.ESFERA6,
-            self.ESFERA7
+            # self.ESFERA2,
+            # self.ESFERA3,
+            # self.ESFERA4,
+            # self.ESFERA5,
+            # self.ESFERA6,
+            # self.ESFERA7
         ]
         
         self.__gerarLocalizacoes()
@@ -31,11 +31,18 @@ class Esferas:
     def __gerarLocalizacoes(self):
 
         for esfera in self.esferas:
-            print(esfera)
+         
+            # self.localizacoes.append(
+            #     [
+            #         self.__sortearPosicaoNoEixo(),
+            #         self.__sortearPosicaoNoEixo(),
+            #         esfera
+            #     ])
+
             self.localizacoes.append(
                 [
-                    self.__sortearPosicaoNoEixo(),
-                    self.__sortearPosicaoNoEixo(),
+                    16,
+                    16,
                     esfera
                 ])
 

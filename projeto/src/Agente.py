@@ -70,9 +70,11 @@ class Agente:
     def mostrarMundo(self):
         return self.__mundo.printarMatriz()
 
+
 a = Agente()
+# print(a.radar.superiorEsquerdo[0][0])
 a.deslocar()
-print(a.radar.superiorEsquerdo)
-print(a.radar.superiorDireito)
-print(a.radar.inferiorEsquerdo)
-print(a.radar.inferiorDireito)
+# print(a.radar.superiorEsquerdo)
+# print(a.radar.superiorDireito)
+# print(a.radar.inferiorEsquerdo)
+# print(a.radar.inferiorDireito)

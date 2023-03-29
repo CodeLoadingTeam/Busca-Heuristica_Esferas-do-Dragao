@@ -38,26 +38,19 @@ class Radar:
 
 
     def __verificarEsferas(self):
-        # direcoes = self.__direcao.direcao
-        
-        # for direcao in direcoes:
 
-        #     match direcao:
-        #         case self.__direcao.ESQUERDA:
-                    
-        #             self.x0
+        for localizacao in self.__mundo.coordenadasDasEsferas():
 
-        #         case self.__direcao.DIREITA:
-        #             self.x1
+            if 16 in self.superiorEsquerdo[0][0]:
+                print('superiorEsquerdo') 
+            
+            # elif localizacao[y][x] in self.superiorEsquerdo:
+            #     print('superiorDireito') 
+            
+            # elif localizacao[y][x] in self.inferiorDireito:
+            #     print('superiorDireito') 
+            
+            # elif localizacao[y][x] in self.inferiorEsquerdo:
+            #     print('superiorDireito') 
 
-        #         case self.__direcao.CIMA:
-        #             self.y0
-
-        #         case self.__direcao.BAIXO:
-        #             self.y0
-
-        for esfera in self.__mundo.coordenadasDasEsferas():
-            x, y = 1, 0
-
-            if esfera[x] 
-
+                 
