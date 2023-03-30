@@ -1,5 +1,4 @@
-from Mundo import Mundo
-from Direcional import Direcional
+# from Mundo import Mundo
 
 class Radar:
 
@@ -22,4 +21,6 @@ class Radar:
         for esfera in self.__mundo.coordenadasDasEsferas():
 
             if esfera['y'] in self.coordenadas['y'] and esfera['x'] in self.coordenadas['x']:
-                print(esfera['valor']) 
+                
+                self.__mundo.usarMatriz()[esfera['y']][esfera['x']] = esfera['valor']
+                print(esfera['valor'])

@@ -27,7 +27,7 @@ class Agente:
 
         self.localizacao = [self.x, self.y]
         self.__armazenarBiomaAtual()
-        self.mundo.atualizarMatriz(self.x, self.y, '⌘')
+        self.mundo.atualizarMatriz(self.x, self.y, '✠')
         
 
 
@@ -70,7 +70,3 @@ class Agente:
 
     def mostrarMundo(self):
         return self.mundo.printarMatriz()
-
-
-a = Agente()
-a.deslocar()
