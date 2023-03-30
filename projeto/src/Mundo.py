@@ -81,4 +81,4 @@ class Mundo:
 
 
     def coletarEsfera(self, posicao):
-        self.__esferas.localizacoes[posicao][2] = ''
+        self.__esferas.localizacoes[posicao]['valor'] = ''
