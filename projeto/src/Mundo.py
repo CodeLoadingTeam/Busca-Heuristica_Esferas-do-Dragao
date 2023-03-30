@@ -1,4 +1,5 @@
 from Esferas import Esferas
+from Cores import Cores
 
 class Mundo:
 
@@ -65,12 +66,26 @@ class Mundo:
         for linha in self.usarMatriz():
             
             for coluna in linha: 
-                print(coluna, end= ' ')
+                print(self.formatar(coluna), end= ' ')
 
             print()
 
         print()
 
+
+    def formatar(self, texto):
+        if texto in self.__esferas.esferas:
+            return Cores.AMARELO + texto + Cores.PADRAO
+        
+        match texto:
+            case '✠':
+                return Cores.VERMELHO + texto + Cores.PADRAO
+            case 'G':
+                return Cores.VERDE + texto + Cores.PADRAO
+            case 'A':
+                return Cores.AZUL + texto + Cores.PADRAO
+            
+        return texto
 
     def dimensaoDaMatriz(self):
         return self.__dimensaoMatriz
