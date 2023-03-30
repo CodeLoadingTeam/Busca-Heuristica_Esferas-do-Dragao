@@ -51,6 +51,11 @@ class Mundo:
 
         self.__esferas = Esferas(self.usarMatriz())
         self.__dimensaoMatriz = len(self.usarMatriz())
+        self.custos  = { 
+            "M" : 60,
+            "A" : 10,
+            "G" : 1
+        }
 
 
     def usarMatriz(self):

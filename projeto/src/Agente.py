@@ -7,6 +7,7 @@ class Agente:
     x = 19
     y = 19
     inicializacao = True
+    custo = 0
 
 
     def __init__(self):
@@ -28,6 +29,9 @@ class Agente:
         self.localizacao = [self.x, self.y]
         self.__armazenarBiomaAtual()
         self.mundo.atualizarMatriz(self.x, self.y, '✠')
+
+        if self.__bioma in self.mundo.custos:
+            self.custo += self.mundo.custos[self.__bioma]
         
 
 

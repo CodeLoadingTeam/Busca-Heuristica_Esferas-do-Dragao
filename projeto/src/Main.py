@@ -23,6 +23,8 @@ def executar():
 
     agente.deslocar()
     agente.mostrarMundo()
+    
+    print('\n', agente.custo)
     t.sleep(0.2) 
 
     executar()
@@ -31,5 +33,7 @@ def executar():
 def limparPrint():
     print("\033c", end="")
 
+
+### ################################################### ###
 
 executar()
