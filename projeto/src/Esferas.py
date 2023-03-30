@@ -40,11 +40,11 @@ class Esferas:
             #     ])
 
             self.localizacoes.append(
-                [
-                    16,
-                    16,
-                    esfera
-                ])
+                {
+                    'y': 16,
+                    'x': 16,
+                    'valor': esfera
+                })
 
 
     def __sortearPosicaoNoEixo(self):
