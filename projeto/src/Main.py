@@ -18,12 +18,12 @@ def executar():
 
             agente.mostrarMundo()
             esfera['aparicao'] = 'visualizada'
-            t.sleep(2)
+            t.sleep(3)
 
 
     agente.deslocar()
     agente.mostrarMundo()
-    t.sleep(0.001) 
+    t.sleep(0.2) 
 
     executar()
 
