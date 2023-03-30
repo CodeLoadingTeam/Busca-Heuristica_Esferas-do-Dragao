@@ -17,12 +17,12 @@ class Esferas:
         self.ESFERA7 = '➆'
     
         self.esferas = [
-            # self.ESFERA1,
-            # self.ESFERA2,
-            # self.ESFERA3,
-            # self.ESFERA4,
-            # self.ESFERA5,
-            # self.ESFERA6,
+            self.ESFERA1,
+            self.ESFERA2,
+            self.ESFERA3,
+            self.ESFERA4,
+            self.ESFERA5,
+            self.ESFERA6,
             self.ESFERA7
         ]
         
@@ -32,24 +32,17 @@ class Esferas:
     def __gerarLocalizacoes(self):
 
         for esfera in self.esferas:
-            # x_sorteado, y_sorteado = self.__sortearPosicaoNoEixo(), self.__sortearPosicaoNoEixo()
-            # self.localizacoes.append(
-            #     [
-            #        'y': y_sorteado,
-            #        'x': x_sorteado,
-            #        'valor': esfera,
-            #        'bioma': self.__matrizMundo[y_sorteado][x_sorteado]
-            #     ])
+            x_sorteado, y_sorteado = self.__sortearPosicaoNoEixo(), self.__sortearPosicaoNoEixo()
 
-            x_sorteado, y_sorteado = 16, 22
             self.localizacoes.append(
                 {
-                    'y': y_sorteado,
-                    'x': x_sorteado,
-                    'valor': esfera,
-                    'bioma': self.__matrizMundo[y_sorteado][x_sorteado]
+                   'y': y_sorteado,
+                   'x': x_sorteado,
+                   'valor': esfera,
+                   'bioma': self.__matrizMundo[y_sorteado][x_sorteado],
+                   'aparicao': 'oculta'
                 })
-
+            
 
     def __sortearPosicaoNoEixo(self):
         return self.sorteador.randrange(42)

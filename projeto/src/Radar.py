@@ -1,4 +1,4 @@
-# from Mundo import Mundo
+import time as t
 
 class Radar:
 
@@ -22,5 +22,7 @@ class Radar:
 
             if esfera['y'] in self.coordenadas['y'] and esfera['x'] in self.coordenadas['x']:
                 
-                self.__mundo.usarMatriz()[esfera['y']][esfera['x']] = esfera['valor']
-                print(esfera['valor'])
+                if esfera['aparicao'] == 'oculta':
+                    
+                    self.__mundo.usarMatriz()[esfera['y']][esfera['x']] = esfera['valor']
+                    esfera['aparicao'] = 'visivel'

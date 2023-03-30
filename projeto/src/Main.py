@@ -1,32 +1,35 @@
 from Agente import Agente
 import time as t
+import sys
+
+
+sys.setrecursionlimit(100000)
+
 
 agente = Agente()
 
-##############################
+def executar():
 
-# para trabalhar com o agente, utilize os métodos deslocar() e mostrarMundo()
-# agente.deslocar()
-# agente.mostrarMundo()
-# t.sleep(1)
+    limparPrint()
 
-# print("\033c", end="")
 
-# agente.deslocar()
-# agente.mostrarMundo()
-# t.sleep(1)
+    for esfera in agente.mundo.coordenadasDasEsferas():
+        if esfera['aparicao'] == 'visivel':
 
-# print("\033c", end="")
+            agente.mostrarMundo()
+            esfera['aparicao'] = 'visualizada'
+            t.sleep(2)
 
-# agente.deslocar()
-# agente.mostrarMundo()
-# t.sleep(1)
 
-# print("\033c", end="")
+    agente.deslocar()
+    agente.mostrarMundo()
+    t.sleep(0.001) 
 
-# agente.deslocar()
-# agente.mostrarMundo()
+    executar()
 
-agente.deslocar()
-agente.mostrarMundo()
-t.sleep(1)
+
+def limparPrint():
+    print("\033c", end="")
+
+
+executar()

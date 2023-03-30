@@ -80,10 +80,14 @@ class Mundo:
         match texto:
             case '✠':
                 return Cores.VERMELHO + texto + Cores.PADRAO
+            case 'I':
+                return Cores.ROXO + texto + Cores.PADRAO
             case 'G':
                 return Cores.VERDE + texto + Cores.PADRAO
             case 'A':
                 return Cores.AZUL + texto + Cores.PADRAO
+            case 'M':
+                return Cores.CINZA + texto + Cores.PADRAO
             
         return texto
 
