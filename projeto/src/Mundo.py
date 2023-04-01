@@ -1,3 +1,6 @@
+from Esferas import Esferas
+from Cores import Cores
+
 class Mundo:
 
     def __init__(self):
@@ -46,7 +49,13 @@ class Mundo:
             ['A','G','M','M','G','G','M','M','G','G','G','G','G','M','G','M','M','G','G','G','M','M','G','M','G','G','G','G','G','M','G','G','G','G','G','G','M','G','G','G','A','A']
         ]
 
+        self.__esferas = Esferas(self.usarMatriz())
         self.__dimensaoMatriz = len(self.usarMatriz())
+        self.custos  = { 
+            "M" : 60,
+            "A" : 10,
+            "G" : 1
+        }
 
 
     def usarMatriz(self):
@@ -62,12 +71,38 @@ class Mundo:
         for linha in self.usarMatriz():
             
             for coluna in linha: 
-                print(coluna, end= ' ')
+                print(self.formatar(coluna), end= ' ')
 
             print()
 
         print()
 
 
+    def formatar(self, texto):
+        if texto in self.__esferas.esferas:
+            return Cores.AMARELO + texto + Cores.PADRAO
+        
+        match texto:
+            case '✠':
+                return Cores.VERMELHO + texto + Cores.PADRAO
+            case 'I':
+                return Cores.ROXO + texto + Cores.PADRAO
+            case 'G':
+                return Cores.VERDE + texto + Cores.PADRAO
+            case 'A':
+                return Cores.AZUL + texto + Cores.PADRAO
+            case 'M':
+                return Cores.CINZA + texto + Cores.PADRAO
+            
+        return texto
+
     def dimensaoDaMatriz(self):
         return self.__dimensaoMatriz
+    
+
+    def coordenadasDasEsferas(self):
+        return self.__esferas.localizacoes
+
+
+    def coletarEsfera(self, posicao):
+        self.__esferas.localizacoes[posicao]['valor'] = ''
